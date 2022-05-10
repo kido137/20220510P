@@ -48,28 +48,33 @@ int main()
 
         }
 
-        PlayerPosition.X = PlayerPosition.X < 1 ? 1 : PlayerPosition.X;
-        PlayerPosition.Y = PlayerPosition.Y < 1 ? 1 : PlayerPosition.Y;
-        PlayerPosition.X = PlayerPosition.X > 16 ? 16 : PlayerPosition.X;
-        PlayerPosition.Y = PlayerPosition.Y > 8 ? 8 : PlayerPosition.Y;
+        PlayerPosition.X = PlayerPosition.X < 11 ? 11 : PlayerPosition.X;
+        PlayerPosition.Y = PlayerPosition.Y < 6 ? 6 : PlayerPosition.Y;
+        PlayerPosition.X = PlayerPosition.X > 27 ? 27 : PlayerPosition.X;
+        PlayerPosition.Y = PlayerPosition.Y > 13 ? 13 : PlayerPosition.Y;
 
         system("cls");
 
-    int Map[10][10] = {
-    { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
-    { 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-    { 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-    { 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-    { 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-    { 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-    { 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-    { 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-    { 1, 0, 0, 0, 0, 0, 0, 0, 0, 1 },
-    { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }
+    int Map[15][15] = {
+    { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, },
+    { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, },
+    { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, },
+    { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, },
+    { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, },
+    { 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, },
+    { 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, },
+    { 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, },
+    { 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, },
+    { 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, },
+    { 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, },
+    { 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, },
+    { 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, },
+    { 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, },
+    { 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, }
     };
-    for (int Y = 0; Y < 10; ++Y)
+    for (int Y = 0; Y < 15; ++Y)
     {
-        for (int X = 0; X < 10; ++X)
+        for (int X = 0; X < 15; ++X)
         {
             if (Map[Y][X] == 1)
             {
